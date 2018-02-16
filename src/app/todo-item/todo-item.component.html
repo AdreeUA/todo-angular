@@ -1,0 +1,32 @@
+<div class="item" [class.completed]="todo.completed" [ngClass]="[overClassName]">
+
+  <div class="handle">
+    <button mat-icon-button>
+      <mat-icon aria-label="Move">reorder</mat-icon>
+    </button>
+  </div>
+
+  <button mat-icon-button class="checkbox" (click)="onToggle()">
+    <mat-icon aria-label="Added new todo">{{todo.completed ? 'check_box' : 'check_box_outline_blank'}}</mat-icon>
+  </button>
+
+  <div class="inner">
+    <span class="disc">{{ todo.date }}</span>
+    <a class="title" routerLink="/todos/{{todo.id}}">{{ todo.title }}</a>
+  </div>
+
+  <div class="actions">
+
+    <button mat-icon-button (click)="onEdit()">
+      <mat-icon aria-label="Edit todo">edit</mat-icon>
+    </button>
+
+    <button mat-icon-button (click)="onDelete()">
+      <mat-icon aria-label="Added new todo">delete</mat-icon>
+    </button>
+
+  </div>
+
+
+
+</div>

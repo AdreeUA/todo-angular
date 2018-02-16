@@ -1,0 +1,28 @@
+<form class="form" (ngSubmit)="onSubmit();" #editForm="ngForm">
+
+  <div class="item">
+    <mat-form-field>
+      <input matInput name='title' [(ngModel)]="title" placeholder="Title" required>
+    </mat-form-field>
+  </div>
+
+  <div class="item">
+    <mat-form-field>
+      <textarea matInput name='discription' [(ngModel)]="discription" placeholder="Discription" required matTextareaAutosize matAutosizeMinRows="5"
+        matAutosizeMaxRows="7"></textarea>
+    </mat-form-field>
+  </div>
+
+  <div class="item">
+    <mat-form-field>
+      <input matInput [matDatepicker]="picker" placeholder="Date" [formControl]="date" (click)="picker.open()" required>
+      <mat-datepicker-toggle matSuffix [for]=" picker "></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+  </div>
+
+  <div class="item">
+    <button class="form-submit" mat-raised-button color="primary" type="submit " [disabled]="editForm.form.invalid ">Save</button>
+  </div>
+
+</form>

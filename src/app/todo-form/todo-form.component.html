@@ -1,0 +1,28 @@
+<form class="todo-form" (ngSubmit)="onSubmit(); todoForm.reset()" #todoForm="ngForm" [formGroup]="form">
+
+  <div class="todo-form-item">
+    <mat-form-field>
+      <input matInput [(ngModel)]="title" placeholder="Title" required formControlName="title">
+    </mat-form-field>
+  </div>
+
+  <div class="todo-form-item">
+    <mat-form-field>
+      <input matInput [matDatepicker]="picker" placeholder="Date" [formControl]="date" (click)="picker.open()" required>
+      <mat-datepicker-toggle matSuffix [for]=" picker "></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+  </div>
+
+  <div class="todo-form-item full">
+    <mat-form-field>
+      <textarea matInput [(ngModel)]="discription" placeholder="Discription" required matTextareaAutosize matAutosizeMinRows="2"
+        matAutosizeMaxRows="2" formControlName="discription"></textarea>
+    </mat-form-field>
+  </div>
+
+  <div class="todo-form-item full">
+    <button class="todo-form-submit" mat-raised-button color="primary" type="submit " [disabled]="todoForm.form.invalid ">Add todo</button>
+  </div>
+
+</form>

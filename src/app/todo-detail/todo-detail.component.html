@@ -1,0 +1,12 @@
+<div *ngIf="todo">
+  <button class="back-button" mat-raised-button color="primary" type="submit " (click)="goBack()">Go back</button>
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>{{todo.title}}</mat-card-title>
+      <mat-card-subtitle>{{todo.date}}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <div class="content">{{todo.discription}}</div>
+    </mat-card-content>
+  </mat-card>
+</div>

@@ -1,1 +1,14 @@
-/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import "~dragula/dist/dragula.css";
+
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box
+}
+
+body {
+    background-color:#f9f9f9;
+    color: #444;
+}

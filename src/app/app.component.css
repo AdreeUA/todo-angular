@@ -1,0 +1,14 @@
+.wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.title {
+    flex: 1;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+header {
+    margin-bottom: 20px;
+}

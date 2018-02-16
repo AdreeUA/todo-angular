@@ -1,0 +1,18 @@
+.todo-form {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.todo-form-item {
+  margin: 0 10px 10px;
+  flex: 1 1 auto;
+}
+
+.todo-form-item > *  {
+  width: 100%;
+}
+
+.todo-form-item.full {
+  flex: 1 1 100%;
+}
